@@ -2,7 +2,7 @@
 nixPkgs = ['nodejs']
 
 [phases.install]
-cmds = ['pwd', 'ls ./src/mastra -la', 'yarn install']
+cmds = ['pwd', 'ls -la', 'yarn install']
 
 [phases.build]
 cmds = ['pwd', 'ls -la', 'yarn mastra build']
