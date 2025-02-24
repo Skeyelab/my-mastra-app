@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ['nodejs']
+nixPkgs = ['nodejs', 'pkg-config', 'openssl']
 
 [phases.install]
 cmds = ['npm install']
@@ -12,3 +12,4 @@ cmd = 'npm run start'
 
 [variables]
 NODE_ENV = 'production'
+NIXPACKS_PLATFORM = 'linux/amd64'
