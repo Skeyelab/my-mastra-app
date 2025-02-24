@@ -1,11 +1,11 @@
 [phases.setup]
-nixPkgs = ['nodejs', 'nodejs-slim']
+nixPkgs = ['nodejs']
 
 [phases.install]
 cmds = ['yarn install']
 
 [phases.build]
-cmds = ['yarn build']
+cmds = ['yarn mastra build']
 
 [start]
 cmd = 'yarn start'
