@@ -2,13 +2,13 @@
 nixPkgs = ['nodejs']
 
 [phases.install]
-cmds = ['yarn install']
+cmds = ['pwd', 'yarn install']
 
 [phases.build]
-cmds = ['yarn mastra build']
+cmds = ['pwd', 'yarn mastra build']
 
 [start]
-cmd = 'yarn start'
+cmd = 'pwd && yarn start'
 
 [variables]
 NODE_ENV = 'production'
