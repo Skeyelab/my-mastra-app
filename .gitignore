@@ -6,3 +6,4 @@ dist
 .env
 *.db
 src/mastra/.DS_Store
+src/.DS_Store
