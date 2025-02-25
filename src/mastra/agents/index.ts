@@ -24,3 +24,4 @@ export const weatherAgent = new Agent({
   tools: { weatherTool },
   memory: memory
 });
+
