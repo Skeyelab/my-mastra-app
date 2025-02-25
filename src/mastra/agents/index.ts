@@ -22,3 +22,12 @@ export const weatherAgent = new Agent({
   tools: { weatherTool },
   memory: memory,
 });
+
+export const jokeAgent = new Agent({
+  name: "Joke Agent",
+  instructions: `
+      You are a helpful joke assistant that provides funny jokes.
+`,
+  model: openai("gpt-4o-mini"),
+  memory: memory,
+});
