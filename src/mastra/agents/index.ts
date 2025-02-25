@@ -3,7 +3,13 @@ import { Agent } from "@mastra/core/agent";
 import { weatherTool } from "../tools";
 import { Memory } from "@mastra/memory";
 
-const memory = new Memory();
+const memory = new Memory({
+  options: {
+    workingMemory: {
+      enabled: true,
+    },
+  },
+});
 
 export const weatherAgent = new Agent({
   name: "Weather Agent",
@@ -20,14 +26,5 @@ export const weatherAgent = new Agent({
 `,
   model: openai("gpt-4o-mini"),
   tools: { weatherTool },
-  memory: memory,
-});
-
-export const jokeAgent = new Agent({
-  name: "Joke Agent",
-  instructions: `
-      You are a helpful joke assistant that provides funny jokes.
-`,
-  model: openai("gpt-4o-mini"),
   memory: memory,
 });
