@@ -26,5 +26,5 @@ export const weatherAgent = new Agent({
 `,
   model: openai("gpt-4o-mini"),
   tools: { weatherTool },
-  memory: memory,
+  memory
 });

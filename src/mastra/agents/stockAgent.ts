@@ -1,5 +1,13 @@
 import { Agent } from "@mastra/core/agent";
 import { openai } from "@ai-sdk/openai";
+import { Memory } from "@mastra/memory";
+const memory = new Memory({
+  options: {
+    workingMemory: {
+      enabled: true,
+    },
+  },
+});
 
 import * as tools from "../tools/stockPrices";
 
@@ -11,4 +19,5 @@ export const stockAgent = new Agent<typeof tools>({
   tools: {
     stockPrices: tools.stockPrices,
   },
+  memory: memory
 });
